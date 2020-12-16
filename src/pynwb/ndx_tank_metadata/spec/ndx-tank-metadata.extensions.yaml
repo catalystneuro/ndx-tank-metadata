@@ -1,0 +1,26 @@
+groups:
+- neurodata_type_def: LabMetaDataExtension
+  neurodata_type_inc: LabMetaData
+  doc: type for storing metadata for Tank lab
+  attributes:
+  - name: experiment_name
+    dtype: text
+    doc: name of experiment run
+  - name: world_file_name
+    dtype: text
+    doc: name of world file run
+  - name: protocol_name
+    dtype: text
+    doc: name of protocol run
+  - name: stimulus_bank_path
+    dtype: text
+    doc: path of stimulus bank file
+  - name: commit_id
+    dtype: text
+    doc: Commit id for session run
+  - name: location
+    dtype: text
+    doc: Name of rig where session was run
+  - name: session_performance
+    dtype: float
+    doc: Performance of correct responses in %
