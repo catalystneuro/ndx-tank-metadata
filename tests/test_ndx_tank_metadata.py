@@ -14,9 +14,8 @@ class LabMetaDataExtensionTest(unittest.TestCase):
     def test_add_lab_metadata(self):
         # Creates LabMetaData container
 
-        lab_metadata = LabMetaDataExtension(
+        lab_metadata_dict = dict(
             name='LabMetaData',
-            subject_name='test',
             experiment_name='test',
             world_file_name='test',
             protocol_name='test',
@@ -25,6 +24,8 @@ class LabMetaDataExtensionTest(unittest.TestCase):
             location='test',
             session_performance=1.,
         )
+
+        lab_metadata = LabMetaDataExtension(**lab_metadata_dict)
 
         # Add to file
         self.nwbfile.add_lab_meta_data(lab_metadata)
@@ -35,6 +36,9 @@ class LabMetaDataExtensionTest(unittest.TestCase):
             io.write(self.nwbfile)
 
         with NWBHDF5IO(filename, mode='r', load_namespaces=True) as io:
-            io.read()
+            nwbfile = io.read()
+
+            for k, v in lab_metadata_dict.items():
+                self.assertEqual(v, getattr(nwbfile.lab_meta_data['LabMetaData'], k, None))
 
         os.remove(filename)

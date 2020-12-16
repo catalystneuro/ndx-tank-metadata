@@ -23,49 +23,42 @@ def main():
         name='experiment_name',
         doc='name of experiment run',
         dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
         name='world_file_name',
         doc='name of world file run',
         dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
         name='protocol_name',
         doc='name of protocol run',
         dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
         name='stimulus_bank_path',
         doc='path of stimulus bank file',
         dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
         name='commit_id',
         doc='Commit id for session run',
         dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
         name='location',
         doc='Name of rig where session was run',
         dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
         name='session_performance',
         doc='Performance of correct responses in %',
         dtype='float',
-        shape=None,
     )
 
     # export the extension to yaml files in the spec folder
