@@ -3,11 +3,13 @@ from pynwb.spec import NWBNamespaceBuilder, NWBGroupSpec, export_spec
 
 
 def main():
-    ns_builder = NWBNamespaceBuilder(doc='type for storing metadata for Tank lab',
-                                     name='ndx-tank-metadata',
-                                     version='0.1.0',
-                                     author=['Szonja Weigl', 'Luiz Tauffer', 'Ben Dichter'],
-                                     contact=['ben.dichter@gmail.com'])
+    ns_builder = NWBNamespaceBuilder(
+        doc='type for storing metadata for Tank lab',
+        name='ndx-tank-metadata',
+        version='0.1.0',
+        author=['Szonja Weigl', 'Luiz Tauffer', 'Ben Dichter'],
+        contact=['ben.dichter@gmail.com']
+    )
 
     ns_builder.include_type('LabMetaData', namespace='core')
 
@@ -15,13 +17,6 @@ def main():
         doc='type for storing metadata for Tank lab',
         neurodata_type_def='LabMetaDataExtension',
         neurodata_type_inc='LabMetaData',
-    )
-
-    LabMetaDataExtension.add_attribute(
-        name='subject_name',
-        doc='name of the subject',
-        dtype='text',
-        shape=None,
     )
 
     LabMetaDataExtension.add_attribute(
