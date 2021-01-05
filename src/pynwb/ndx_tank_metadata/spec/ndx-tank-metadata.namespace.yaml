@@ -11,5 +11,6 @@ namespaces:
   - namespace: core
     neurodata_types:
     - LabMetaData
+    - DynamicTable
   - source: ndx-tank-metadata.extensions.yaml
   version: 0.1.0

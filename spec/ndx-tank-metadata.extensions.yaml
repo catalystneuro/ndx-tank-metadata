@@ -24,3 +24,90 @@ groups:
   - name: session_performance
     dtype: float
     doc: Performance of correct responses in %
+    required: false
+  groups:
+  - name: rig
+    neurodata_type_inc: RigExtension
+    doc: type for storing rig information
+  - name: mazes
+    neurodata_type_inc: MazeExtension
+    doc: type for storing maze information
+- neurodata_type_def: RigExtension
+  neurodata_type_inc: LabMetaData
+  doc: type for storing rig information
+  attributes:
+  - name: rig
+    dtype: text
+    doc: rig information
+  - name: simulationMode
+    dtype: text
+    doc: rig information
+  - name: hasDAQ
+    dtype: text
+    doc: rig information
+  - name: hasSyncComm
+    dtype: text
+    doc: rig information
+  - name: minIterationDT
+    dtype: text
+    doc: rig information
+  - name: arduinoPort
+    dtype: text
+    doc: rig information
+  - name: sensorDotsPerRev
+    dtype: text
+    doc: rig information
+  - name: ballCircumference
+    dtype: text
+    doc: rig information
+  - name: toroidXFormP1
+    dtype: text
+    doc: rig information
+  - name: toroidXFormP2
+    dtype: text
+    doc: rig information
+  - name: colorAdjustment
+    dtype: text
+    doc: rig information
+  - name: soundAdjustment
+    dtype: text
+    doc: rig information
+  - name: nidaqDevice
+    dtype: text
+    doc: rig information
+  - name: nidaqPort
+    dtype: text
+    doc: rig information
+  - name: nidaqLines
+    dtype: text
+    doc: rig information
+  - name: syncClockChannel
+    dtype: text
+    doc: rig information
+  - name: syncDataChannel
+    dtype: text
+    doc: rig information
+  - name: rewardChannel
+    dtype: text
+    doc: rig information
+  - name: rewardSize
+    dtype: text
+    doc: rig information
+  - name: rewardDuration
+    dtype: text
+    doc: rig information
+  - name: laserChannel
+    dtype: text
+    doc: rig information
+  - name: rightPuffChannel
+    dtype: text
+    doc: rig information
+  - name: leftPuffChannel
+    dtype: text
+    doc: rig information
+  - name: webcam_name
+    dtype: text
+    doc: rig information
+- neurodata_type_def: MazeExtension
+  neurodata_type_inc: DynamicTable
+  doc: type for storing maze information
