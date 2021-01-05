@@ -12,6 +12,7 @@ def main():
     )
 
     ns_builder.include_type('LabMetaData', namespace='core')
+    ns_builder.include_type('DynamicTable', namespace='core')
 
     LabMetaDataExtension = NWBGroupSpec(
         doc='type for storing metadata for Tank lab',
@@ -86,9 +87,21 @@ def main():
         doc='type for storing rig information',
     )
 
+    MazeExtension = NWBGroupSpec(
+        doc='type for storing maze information',
+        neurodata_type_def='MazeExtension',
+        neurodata_type_inc='DynamicTable',
+    )
+
+    LabMetaDataExtension.add_group(
+        name='mazes',
+        neurodata_type_inc='MazeExtension',
+        doc='type for storing maze information',
+    )
+
     # export the extension to yaml files in the spec folder
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'spec'))
-    export_spec(ns_builder, [LabMetaDataExtension, RigExtension], output_dir)
+    export_spec(ns_builder, [LabMetaDataExtension, RigExtension, MazeExtension], output_dir)
 
 
 if __name__ == "__main__":
