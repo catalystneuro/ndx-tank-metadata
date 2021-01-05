@@ -61,9 +61,34 @@ def main():
         dtype='float',
     )
 
+    RigExtension = NWBGroupSpec(
+        doc='type for storing rig information',
+        neurodata_type_def='RigExtension',
+        neurodata_type_inc='LabMetaData',
+    )
+
+    rig_attr = ['rig', 'simulationMode', 'hasDAQ', 'hasSyncComm', 'minIterationDT', 'arduinoPort',
+                'sensorDotsPerRev', 'ballCircumference', 'toroidXFormP1', 'toroidXFormP2',
+                'colorAdjustment', 'soundAdjustment', 'nidaqDevice', 'nidaqPort', 'nidaqLines',
+                'syncClockChannel', 'syncDataChannel', 'rewardChannel', 'rewardSize',
+                'rewardDuration', 'laserChannel', 'rightPuffChannel', 'leftPuffChannel',
+                'webcam_name']
+    for attr in rig_attr:
+        RigExtension.add_attribute(
+            name=attr,
+            doc='rig information',
+            dtype='text',
+        )
+
+    LabMetaDataExtension.add_group(
+        name='rig',
+        neurodata_type_inc='RigExtension',
+        doc='type for storing rig information',
+    )
+
     # export the extension to yaml files in the spec folder
     output_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'spec'))
-    export_spec(ns_builder, [LabMetaDataExtension], output_dir)
+    export_spec(ns_builder, [LabMetaDataExtension, RigExtension], output_dir)
 
 
 if __name__ == "__main__":
