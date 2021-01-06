@@ -63,6 +63,18 @@ def main():
         required=False
     )
 
+    LabMetaDataExtension.add_attribute(
+        name='session_end_time',
+        doc='Datetime when session ended',
+        dtype='text',  # temporary solution until datetime is fixed
+    )
+
+    LabMetaDataExtension.add_attribute(
+        name='num_trials',
+        doc='Number of trials during the session',
+        dtype='int',
+    )
+
     RigExtension = NWBGroupSpec(
         doc='type for storing rig information',
         neurodata_type_def='RigExtension',
