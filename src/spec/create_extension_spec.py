@@ -81,18 +81,30 @@ def main():
         neurodata_type_inc='LabMetaData',
     )
 
-    rig_attr = ['rig', 'simulationMode', 'hasDAQ', 'hasSyncComm', 'minIterationDT', 'arduinoPort',
-                'sensorDotsPerRev', 'ballCircumference', 'toroidXFormP1', 'toroidXFormP2',
-                'colorAdjustment', 'soundAdjustment', 'nidaqDevice', 'nidaqPort', 'nidaqLines',
-                'syncClockChannel', 'syncDataChannel', 'rewardChannel', 'rewardSize',
-                'rewardDuration', 'laserChannel', 'rightPuffChannel', 'leftPuffChannel',
-                'webcam_name']
+    rig_attr = [('rig', 'text'), ('simulationMode', 'int'), ('hasDAQ', 'int'),
+                ('hasSyncComm', 'int'), ('minIterationDT', 'float'), ('arduinoPort', 'text'),
+                ('sensorDotsPerRev', 'float'), ('ballCircumference', 'float'),
+                ('toroidXFormP1', 'float'), ('toroidXFormP2', 'float'),
+                ('colorAdjustment', 'float'), ('soundAdjustment', 'float'),
+                ('nidaqDevice', 'int'), ('nidaqPort', 'int'), ('nidaqLines', 'int'),
+                ('syncClockChannel', 'int'), ('syncDataChannel', 'int'),
+                ('rewardChannel', 'int'), ('rewardSize', 'float'),
+                ('rewardDuration', 'float'), ('laserChannel', 'int'),
+                ('rightPuffChannel', 'int'), ('leftPuffChannel', 'int'), ('webcam_name', 'text')]
     for attr in rig_attr:
-        RigExtension.add_attribute(
-            name=attr,
-            doc='rig information',
-            dtype='text',
-        )
+        if attr[0] in ['sensorDotsPerRev', 'colorAdjustment', 'nidaqLines']:
+            RigExtension.add_attribute(
+                name=attr[0],
+                doc='rig information',
+                dtype=attr[1],
+                shape=(None,)
+            )
+        else:
+            RigExtension.add_attribute(
+                name=attr[0],
+                doc='rig information',
+                dtype=attr[1],
+            )
 
     LabMetaDataExtension.add_group(
         name='rig',
