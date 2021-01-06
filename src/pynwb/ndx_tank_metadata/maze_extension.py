@@ -24,7 +24,7 @@ class MazeExtension(DynamicTable):
                   'blockPerform']
 
     __columns__ = tuple(
-        {'name': attr, 'description': 'maze information', 'required': True, 'index': True,
+        {'name': attr, 'description': 'maze information', 'required': True, 'index': False,
          'table': False} for attr in mazes_attr
     )
 
