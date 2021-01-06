@@ -25,6 +25,12 @@ groups:
     dtype: float
     doc: Performance of correct responses in %
     required: false
+  - name: session_end_time
+    dtype: text
+    doc: Datetime when session ended
+  - name: num_trials
+    dtype: int
+    doc: Number of trials during the session
   groups:
   - name: rig
     neurodata_type_inc: RigExtension
@@ -40,70 +46,76 @@ groups:
     dtype: text
     doc: rig information
   - name: simulationMode
-    dtype: text
+    dtype: int
     doc: rig information
   - name: hasDAQ
-    dtype: text
+    dtype: int
     doc: rig information
   - name: hasSyncComm
-    dtype: text
+    dtype: int
     doc: rig information
   - name: minIterationDT
-    dtype: text
+    dtype: float
     doc: rig information
   - name: arduinoPort
     dtype: text
     doc: rig information
   - name: sensorDotsPerRev
-    dtype: text
+    dtype: float
+    shape:
+    - null
     doc: rig information
   - name: ballCircumference
-    dtype: text
+    dtype: float
     doc: rig information
   - name: toroidXFormP1
-    dtype: text
+    dtype: float
     doc: rig information
   - name: toroidXFormP2
-    dtype: text
+    dtype: float
     doc: rig information
   - name: colorAdjustment
-    dtype: text
+    dtype: float
+    shape:
+    - null
     doc: rig information
   - name: soundAdjustment
-    dtype: text
+    dtype: float
     doc: rig information
   - name: nidaqDevice
-    dtype: text
+    dtype: int
     doc: rig information
   - name: nidaqPort
-    dtype: text
+    dtype: int
     doc: rig information
   - name: nidaqLines
-    dtype: text
+    dtype: int
+    shape:
+    - null
     doc: rig information
   - name: syncClockChannel
-    dtype: text
+    dtype: int
     doc: rig information
   - name: syncDataChannel
-    dtype: text
+    dtype: int
     doc: rig information
   - name: rewardChannel
-    dtype: text
+    dtype: int
     doc: rig information
   - name: rewardSize
-    dtype: text
+    dtype: float
     doc: rig information
   - name: rewardDuration
-    dtype: text
+    dtype: float
     doc: rig information
   - name: laserChannel
-    dtype: text
+    dtype: int
     doc: rig information
   - name: rightPuffChannel
-    dtype: text
+    dtype: int
     doc: rig information
   - name: leftPuffChannel
-    dtype: text
+    dtype: int
     doc: rig information
   - name: webcam_name
     dtype: text
