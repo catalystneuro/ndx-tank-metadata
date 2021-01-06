@@ -60,6 +60,7 @@ def main():
         name='session_performance',
         doc='Performance of correct responses in %',
         dtype='float',
+        required=False
     )
 
     RigExtension = NWBGroupSpec(
