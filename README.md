@@ -3,5 +3,5 @@ NWB:N LabMetaData extension for [Tank lab](https://pni.princeton.edu/faculty/dav
 
 # Install
 ```
-$ pip install git+https://github.com/catalystneuro/ndx-tank-metadata.git
+$ pip install ndx-tank-metadata
 ```
