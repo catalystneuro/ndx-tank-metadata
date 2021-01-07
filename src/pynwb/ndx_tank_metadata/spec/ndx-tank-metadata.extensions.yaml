@@ -24,3 +24,102 @@ groups:
   - name: session_performance
     dtype: float
     doc: Performance of correct responses in %
+    required: false
+  - name: session_end_time
+    dtype: text
+    doc: Datetime when session ended
+  - name: num_trials
+    dtype: int
+    doc: Number of trials during the session
+  groups:
+  - name: rig
+    neurodata_type_inc: RigExtension
+    doc: type for storing rig information
+  - name: mazes
+    neurodata_type_inc: MazeExtension
+    doc: type for storing maze information
+- neurodata_type_def: RigExtension
+  neurodata_type_inc: LabMetaData
+  doc: type for storing rig information
+  attributes:
+  - name: rig
+    dtype: text
+    doc: rig information
+  - name: simulationMode
+    dtype: int
+    doc: rig information
+  - name: hasDAQ
+    dtype: int
+    doc: rig information
+  - name: hasSyncComm
+    dtype: int
+    doc: rig information
+  - name: minIterationDT
+    dtype: float
+    doc: rig information
+  - name: arduinoPort
+    dtype: text
+    doc: rig information
+  - name: sensorDotsPerRev
+    dtype: float
+    shape:
+    - null
+    doc: rig information
+  - name: ballCircumference
+    dtype: float
+    doc: rig information
+  - name: toroidXFormP1
+    dtype: float
+    doc: rig information
+  - name: toroidXFormP2
+    dtype: float
+    doc: rig information
+  - name: colorAdjustment
+    dtype: float
+    shape:
+    - null
+    doc: rig information
+  - name: soundAdjustment
+    dtype: float
+    doc: rig information
+  - name: nidaqDevice
+    dtype: int
+    doc: rig information
+  - name: nidaqPort
+    dtype: int
+    doc: rig information
+  - name: nidaqLines
+    dtype: int
+    shape:
+    - null
+    doc: rig information
+  - name: syncClockChannel
+    dtype: int
+    doc: rig information
+  - name: syncDataChannel
+    dtype: int
+    doc: rig information
+  - name: rewardChannel
+    dtype: int
+    doc: rig information
+  - name: rewardSize
+    dtype: float
+    doc: rig information
+  - name: rewardDuration
+    dtype: float
+    doc: rig information
+  - name: laserChannel
+    dtype: int
+    doc: rig information
+  - name: rightPuffChannel
+    dtype: int
+    doc: rig information
+  - name: leftPuffChannel
+    dtype: int
+    doc: rig information
+  - name: webcam_name
+    dtype: text
+    doc: rig information
+- neurodata_type_def: MazeExtension
+  neurodata_type_inc: DynamicTable
+  doc: type for storing maze information
