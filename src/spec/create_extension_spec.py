@@ -97,13 +97,15 @@ def main():
                 name=attr[0],
                 doc='rig information',
                 dtype=attr[1],
-                shape=(None,)
+                shape=(None,),
+                required=False
             )
         else:
             RigExtension.add_attribute(
                 name=attr[0],
                 doc='rig information',
                 dtype=attr[1],
+                required=False
             )
 
     LabMetaDataExtension.add_group(
