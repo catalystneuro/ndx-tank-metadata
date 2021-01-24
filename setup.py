@@ -14,7 +14,7 @@ with open('requirements.txt') as f:
 
 setup_args = dict(
     name='ndx-tank-metadata',
-    version='0.1.0',
+    version='0.1.1',
     description='NWB:N extension for storing metadata for Tank lab',
     long_description=long_description,
     long_description_content_type='text/markdown',
