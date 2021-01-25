@@ -43,7 +43,7 @@ class LabMetaDataExtensionTest(unittest.TestCase):
         # Create mazes table
         maze_extension = MazeExtension(name='mazes',
                                        description='description of the mazes')
-        mazes_dict = {k: 'test' for k in maze_extension.colnames}
+        mazes_dict = {k: 'test' for k in maze_extension.mazes_attr}
         maze_extension.add_row(**mazes_dict)
 
         # Creates LabMetaData container
