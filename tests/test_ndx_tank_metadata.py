@@ -3,7 +3,7 @@ from pynwb import NWBFile, NWBHDF5IO
 import unittest
 from datetime import datetime
 
-from src.pynwb.ndx_tank_metadata import LabMetaDataExtension, RigExtension, MazeExtension
+from ndx_tank_metadata import LabMetaDataExtension, RigExtension, MazeExtension
 
 
 class LabMetaDataExtensionTest(unittest.TestCase):

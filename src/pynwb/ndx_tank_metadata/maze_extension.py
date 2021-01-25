@@ -5,7 +5,7 @@ from hdmf.utils import docval, call_docval_func, get_docval
 
 name = 'ndx-tank-metadata'
 
-spec_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
+spec_path = os.path.abspath(os.path.dirname(__file__))
 ns_path = os.path.join(spec_path, 'spec', f'{name}.namespace.yaml')
 
 load_namespaces(ns_path)
