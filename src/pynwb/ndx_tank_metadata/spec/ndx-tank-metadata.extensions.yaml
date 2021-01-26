@@ -45,81 +45,105 @@ groups:
   - name: rig
     dtype: text
     doc: rig information
+    required: false
   - name: simulationMode
     dtype: int
     doc: rig information
+    required: false
   - name: hasDAQ
     dtype: int
     doc: rig information
+    required: false
   - name: hasSyncComm
     dtype: int
     doc: rig information
+    required: false
   - name: minIterationDT
     dtype: float
     doc: rig information
+    required: false
   - name: arduinoPort
     dtype: text
     doc: rig information
+    required: false
   - name: sensorDotsPerRev
     dtype: float
     shape:
     - null
     doc: rig information
+    required: false
   - name: ballCircumference
     dtype: float
     doc: rig information
+    required: false
   - name: toroidXFormP1
     dtype: float
     doc: rig information
+    required: false
   - name: toroidXFormP2
     dtype: float
     doc: rig information
+    required: false
   - name: colorAdjustment
     dtype: float
     shape:
     - null
     doc: rig information
+    required: false
   - name: soundAdjustment
     dtype: float
     doc: rig information
+    required: false
   - name: nidaqDevice
     dtype: int
     doc: rig information
+    required: false
   - name: nidaqPort
     dtype: int
     doc: rig information
+    required: false
   - name: nidaqLines
     dtype: int
     shape:
     - null
     doc: rig information
+    required: false
   - name: syncClockChannel
     dtype: int
     doc: rig information
+    required: false
   - name: syncDataChannel
     dtype: int
     doc: rig information
+    required: false
   - name: rewardChannel
     dtype: int
     doc: rig information
+    required: false
   - name: rewardSize
     dtype: float
     doc: rig information
+    required: false
   - name: rewardDuration
     dtype: float
     doc: rig information
+    required: false
   - name: laserChannel
     dtype: int
     doc: rig information
+    required: false
   - name: rightPuffChannel
     dtype: int
     doc: rig information
+    required: false
   - name: leftPuffChannel
     dtype: int
     doc: rig information
+    required: false
   - name: webcam_name
     dtype: text
     doc: rig information
+    required: false
 - neurodata_type_def: MazeExtension
   neurodata_type_inc: DynamicTable
   doc: type for storing maze information
