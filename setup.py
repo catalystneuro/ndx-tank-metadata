@@ -14,12 +14,12 @@ with open('requirements.txt') as f:
 
 setup_args = dict(
     name='ndx-tank-metadata',
-    version='0.1.2',
+    version='0.2.0',
     description='NWB:N extension for storing metadata for Tank lab',
     long_description=long_description,
     long_description_content_type='text/markdown',
     author='Szonja Weigl, Luiz Tauffer and Ben Dichter',
-    email='ben.dichter@gmail.com',
+    author_email='ben.dichter@gmail.com',
     url='https://github.com/catalystneuro/ndx-tank-metadata',
     packages=find_packages('src/pynwb'),
     package_dir={'': 'src/pynwb'},
