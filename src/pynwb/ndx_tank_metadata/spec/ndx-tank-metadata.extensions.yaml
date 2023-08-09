@@ -9,18 +9,23 @@ groups:
   - name: world_file_name
     dtype: text
     doc: name of world file run
+    required: false
   - name: protocol_name
     dtype: text
     doc: name of protocol run
+    required: false
   - name: stimulus_bank_path
     dtype: text
     doc: path of stimulus bank file
+    required: false
   - name: commit_id
     dtype: text
     doc: Commit id for session run
+    required: false
   - name: location
     dtype: text
     doc: Name of rig where session was run
+    required: false
   - name: session_performance
     dtype: float
     doc: Performance of correct responses in %
@@ -28,9 +33,27 @@ groups:
   - name: session_end_time
     dtype: text
     doc: Datetime when session ended
+    required: false
   - name: num_trials
     dtype: int
     doc: Number of trials during the session
+    required: false
+  - name: num_iterations
+    dtype: int
+    doc: Number of ViRMEN iterations during the session
+    required: false
+  - name: advance
+    dtype: int
+    doc: ViRMEN configuration.
+    required: false
+  - name: squal
+    dtype: float
+    doc: ViRMEN configuration.
+    required: false
+  - name: total_reward
+    dtype: float
+    doc: The total reward in ml.
+    required: false
   groups:
   - name: rig
     neurodata_type_inc: RigExtension

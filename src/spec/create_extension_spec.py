@@ -30,30 +30,35 @@ def main():
         name='world_file_name',
         doc='name of world file run',
         dtype='text',
+        required=False,
     )
 
     LabMetaDataExtension.add_attribute(
         name='protocol_name',
         doc='name of protocol run',
         dtype='text',
+        required=False,
     )
 
     LabMetaDataExtension.add_attribute(
         name='stimulus_bank_path',
         doc='path of stimulus bank file',
         dtype='text',
+        required=False,
     )
 
     LabMetaDataExtension.add_attribute(
         name='commit_id',
         doc='Commit id for session run',
         dtype='text',
+        required=False,
     )
 
     LabMetaDataExtension.add_attribute(
         name='location',
         doc='Name of rig where session was run',
         dtype='text',
+        required=False,
     )
 
     LabMetaDataExtension.add_attribute(
@@ -67,12 +72,42 @@ def main():
         name='session_end_time',
         doc='Datetime when session ended',
         dtype='text',  # temporary solution until datetime is fixed
+        required=False,
     )
 
     LabMetaDataExtension.add_attribute(
         name='num_trials',
         doc='Number of trials during the session',
         dtype='int',
+        required=False,
+    )
+
+    LabMetaDataExtension.add_attribute(
+        name='num_iterations',
+        doc='Number of ViRMEN iterations during the session',
+        dtype='int',
+        required=False,
+    )
+
+    LabMetaDataExtension.add_attribute(
+        name='advance',
+        doc='ViRMEN configuration.',
+        dtype='int',
+        required=False,
+    )
+
+    LabMetaDataExtension.add_attribute(
+        name='squal',
+        doc='ViRMEN configuration.',
+        dtype='float',
+        required=False,
+    )
+
+    LabMetaDataExtension.add_attribute(
+        name='total_reward',
+        doc='The total reward in ml.',
+        dtype='float',
+        required=False,
     )
 
     RigExtension = NWBGroupSpec(
